@@ -3,46 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Galerie</title>
     <script src="//unpkg.com/alpinejs" defer></script>
     <style>
-    .overlay {
-    /* Sit on top of the page content */
-    /* Full width (cover the whole page) */
-    /* Full height (cover the whole page) */
-    /* Stay at the top */
-    /* Stay at the left */
-    /* Stay at the right */
-    /* Stay at the bottom */
-    /* Black background with opacity */
-    /* Add a pointer on hover */
-    /* Use a grid for easy centering */
-    /* Center vertically and horizontally */
+
+.overlay {
+    position: fixed; 
+    width: 100%; 
+    height: 100%; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background-color: rgba(0, 0, 0, 0.9); 
+    cursor: pointer; 
+    display: grid; 
+    place-items: center; 
 }
 .overlay::after {
-    /* Add content : "X" */
-    /* White text color */
-    /* Black background color */
-    /* Font family "sans-serif" */
-    /* Centered text */
-    /* Line height ( idem height ) */
-    /* Display as a block */
-    /* Position absolute */
-    /* 1rem from the top */
-    /* 1rem from the right */
-    /* 2rem width */
-    /* 2rem height */
-    /* White border of 2px */
-    /* Rounded border */
+    content: "X"; 
+    color: white;
+    background-color: #000;
+    font-family: "sans-serif";
+    text-align: center;
+    line-height: 2rem;
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    border: solid 2px white;
+    border-radius: 50%;
 }
 .overlay>figure {
-    /* No margin */
-    /* 1rem padding */
-    /* White border of 2px */
+    margin: 0;
+    padding: 1rem;
+    border: solid 2px white;
 }
 .overlay>figure>img {
-    /* Max width 100% for responsive image */
-    /* Height auto for keeping the ratio */
+    max-width: 100%;
+    height: auto;
 }
     </style>
 </head>

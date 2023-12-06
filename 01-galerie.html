@@ -45,6 +45,16 @@
     max-width: 100%;
     height: auto;
 }
+.minia {
+    cursor: pointer; 
+    margin: 0.5rem; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    border: 1px solid #ccc; 
+    padding: 10px; 
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3); 
+}
     </style>
 </head>
 <body x-data="{imageAffiche : null,}">
@@ -53,9 +63,9 @@
 <div class="overlay" x-show="imageAffiche"  @click="imageAffiche = null" @keyup.escape.window="imageAffiche = null" >
     <figure><img :src="imageAffiche" alt="image 237... un chiot"></figure>
 </div>
-<img src="https://picsum.photos/id/236/40/60" alt="miniature chiot"
+<img class= "minia" src="https://picsum.photos/id/236/40/60" alt="miniature chiot"
 @click="imageAffiche = 'https://picsum.photos/id/236/200/300'">
-<img src="https://picsum.photos/id/237/40/60" alt="miniature chiot"
+<img class="minia" src="https://picsum.photos/id/237/40/60" alt="miniature chiot"
 @click="imageAffiche = 'https://picsum.photos/id/237/200/300'">
 </body> 
 </html>
